@@ -23,6 +23,7 @@ public class SecurityConfig {
         // if we use httpBasic auth
         // - make sure to use HTTPS ( avoid man-in-the-middle )
         return http
+            // you can customize it for do able to use in curls
                 .httpBasic(Customizer.withDefaults()) //when is logged uses JSESSIONID
 //                .authorizeHttpRequests(authRequest -> authRequest
 //                        .requestMatchers("/api").permitAll()
