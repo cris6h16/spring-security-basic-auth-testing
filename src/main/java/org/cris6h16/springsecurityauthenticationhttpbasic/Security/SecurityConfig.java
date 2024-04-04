@@ -41,10 +41,10 @@ public class SecurityConfig {
     public UserDetailsService userDetailsService() {
         UserDetails user = User.withDefaultPasswordEncoder() // you can do your own impl for add more attributes
                 .username("cri6h16")
-                .password("cri6h16")
+                .password("cris6h16") // password is stored encrypted
                 .roles("USER")
                 .build();
-        return new InMemoryUserDetailsManager(user);
+        return new InMemoryUserDetailsManager(user);// works like a password storage
     }
 
     // implementations of UserDetailsService Example non-in-memory
